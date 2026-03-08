@@ -1,0 +1,119 @@
+---
+import Base from '@/layouts/Base.astro';
+---
+<Base title="Contact" description="Report an error, suggest a topic, or get involved with What We Know.">
+  <section class="contact">
+    <div class="container">
+      <h1 class="animate-fade-up">Get in touch</h1>
+
+      <div class="contact-body stagger">
+        <p class="lead">Found an error? Want to suggest a topic? Interested in helping review content? We'd like to hear from you.</p>
+
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/thanks">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden" aria-hidden="true">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-group">
+            <label for="type">What's this about?</label>
+            <select id="type" name="type" required>
+              <option value="">Select one</option>
+              <option value="error">Report an error on a page</option>
+              <option value="topic">Suggest a topic</option>
+              <option value="help">I want to help (reviewing, clinical advice, etc.)</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="If reporting an error, please include which page and what needs correcting."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-back">Your email (optional — only if you'd like a reply)</label>
+            <input type="email" id="contact-back" name="email" placeholder="you@example.com" />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+
+        <div class="callout callout-neutral" style="margin-top: var(--space-2xl)">
+          <p><strong>Your privacy matters.</strong> We don't store any personal information beyond what you submit here. Your email (if provided) is only used to reply to your message.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .contact {
+    padding: var(--space-4xl) 0 var(--space-3xl);
+  }
+
+  .contact h1 {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .contact-form {
+    max-width: 560px;
+  }
+
+  .form-group {
+    margin-bottom: var(--space-lg);
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: var(--space-xs);
+    color: var(--text);
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: var(--white);
+    transition: border-color var(--duration-fast) var(--ease-out),
+                box-shadow var(--duration-fast) var(--ease-out);
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px var(--blue-soft);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  button.btn-primary {
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }
+</style>
