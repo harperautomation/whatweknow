@@ -1,0 +1,131 @@
+---
+import Base from '@/layouts/Base.astro';
+---
+<Base title="Topics">
+  <section class="topics-page">
+    <div class="container-wide">
+      <div class="topics-header animate-fade-up">
+        <h1>Topics</h1>
+        <p>Everything we've compiled so far. Each page is sourced, reviewed, and updated when things change.</p>
+      </div>
+
+      <div class="topic-list stagger">
+
+        <a href="/topics/nhs-waiting-times" class="card topic-row">
+          <div class="topic-row-content">
+            <div class="topic-row-tags">
+              <span class="pill pill-blue">UK</span>
+              <span class="pill pill-blue">NHS</span>
+            </div>
+            <h3>NHS waiting times by clinic</h3>
+            <p>Current waiting times at every NHS gender identity clinic in England and Scotland.</p>
+          </div>
+          <span class="confidence confidence-strong">
+            <span class="confidence-dot"></span>
+            Strong
+          </span>
+        </a>
+
+        <a href="/topics/name-change-england-wales" class="card topic-row">
+          <div class="topic-row-content">
+            <div class="topic-row-tags">
+              <span class="pill pill-blue">UK</span>
+              <span class="pill pill-pink">Legal</span>
+            </div>
+            <h3>Changing your name (England & Wales)</h3>
+            <p>Deed poll vs statutory declaration, where to send it, what to update.</p>
+          </div>
+          <span class="confidence confidence-strong">
+            <span class="confidence-dot"></span>
+            Strong
+          </span>
+        </a>
+
+        <a href="/topics/blood-work-basics" class="card topic-row">
+          <div class="topic-row-content">
+            <div class="topic-row-tags">
+              <span class="pill pill-pink">Health</span>
+            </div>
+            <h3>Blood work basics</h3>
+            <p>What to test, target ranges, when to test, and how to read your results.</p>
+          </div>
+          <span class="confidence confidence-strong">
+            <span class="confidence-dot"></span>
+            Strong
+          </span>
+        </a>
+
+      </div>
+
+      <div class="coming-soon animate-fade-up">
+        <div class="callout callout-pink">
+          <p><strong>More topics coming.</strong> We're working on: UK private providers compared, what to expect from estrogen, what to expect from testosterone, voice training, hair removal, GRC application process, and where to find support (UK). <a href="mailto:charlie@harperautomation.co.uk">Suggest a topic</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .topics-page {
+    padding: var(--space-4xl) 0 var(--space-3xl);
+  }
+
+  .topics-header {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .topics-header h1 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .topics-header p {
+    font-size: 1.05rem;
+  }
+
+  .topic-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .topic-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xl);
+    text-decoration: none;
+  }
+
+  .topic-row h3 {
+    margin: var(--space-xs) 0;
+    font-size: 1.1rem;
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .topic-row:hover h3 {
+    color: #1a7ba3;
+  }
+
+  .topic-row p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .topic-row-tags {
+    display: flex;
+    gap: var(--space-xs);
+  }
+
+  .coming-soon {
+    margin-top: var(--space-3xl);
+  }
+
+  @media (max-width: 640px) {
+    .topic-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-sm);
+    }
+  }
+</style>

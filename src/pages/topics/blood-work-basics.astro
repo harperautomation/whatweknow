@@ -1,0 +1,207 @@
+---
+import Topic from '@/layouts/Topic.astro';
+---
+<Topic
+  title="Blood work basics"
+  description="What to test, target ranges, when to test, and how to read your results on HRT."
+  lastUpdated="March 2026"
+  confidence="strong"
+  sources={9}
+  tags={["Health", "HRT", "Blood tests"]}
+>
+
+<h2>The short version</h2>
+
+<p>If you're on HRT, regular blood tests are essential. They confirm your hormone levels are in the right range, catch side effects early, and help you and your provider adjust doses. The guidelines on what to test and what the target ranges are come from the <strong>Endocrine Society</strong> and <strong>WPATH SOC-8</strong>, and the community broadly agrees with them.</p>
+
+<div class="callout callout-pink">
+  <p><strong>This is not a substitute for a doctor interpreting your results.</strong> This page helps you understand what you're looking at. If something looks off, talk to your prescriber — or if you're self-medicating, contact <a href="https://transharmreduction.org/blood-tests" target="_blank" rel="noopener">Trans Harm Reduction</a> for peer support.</p>
+</div>
+
+<h2>What to test</h2>
+
+<h3>Every time (core panel)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Test</th>
+      <th>Why</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Oestradiol (E2)</strong></td>
+      <td>Primary feminising hormone. Confirms your levels are therapeutic.</td>
+    </tr>
+    <tr>
+      <td><strong>Total testosterone</strong></td>
+      <td>Confirms suppression (transfem) or therapeutic range (transmasc).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Recommended regularly</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Test</th>
+      <th>Why</th>
+      <th>Who</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Full blood count (FBC)</strong></td>
+      <td>Testosterone increases red blood cell production. Polycythaemia (too many red cells) is a real risk on T.</td>
+      <td>Transmasc especially</td>
+    </tr>
+    <tr>
+      <td><strong>Liver function (LFTs)</strong></td>
+      <td>Oral oestradiol and cyproterone acetate are processed by the liver.</td>
+      <td>Transfem on oral E or cypro</td>
+    </tr>
+    <tr>
+      <td><strong>Prolactin</strong></td>
+      <td>Oestradiol can raise prolactin levels. Rarely causes issues but worth monitoring.</td>
+      <td>Transfem</td>
+    </tr>
+    <tr>
+      <td><strong>Lipid profile</strong></td>
+      <td>Both oestradiol and testosterone affect cholesterol and triglycerides.</td>
+      <td>Everyone</td>
+    </tr>
+    <tr>
+      <td><strong>HbA1c / fasting glucose</strong></td>
+      <td>Metabolic changes on HRT can affect insulin sensitivity.</td>
+      <td>Everyone, especially if overweight</td>
+    </tr>
+    <tr>
+      <td><strong>Kidney function (U&Es)</strong></td>
+      <td>Relevant if taking spironolactone (affects potassium).</td>
+      <td>Transfem on spiro</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Occasionally / baseline</h3>
+
+<ul>
+  <li><strong>Bone density (DEXA scan)</strong> — baseline if starting HRT late or if there's been a period without sex hormones</li>
+  <li><strong>Vitamin D</strong> — commonly deficient in the UK generally</li>
+  <li><strong>Thyroid function</strong> — baseline check, not HRT-specific</li>
+</ul>
+
+<h2>Target ranges</h2>
+
+<h3>Transfeminine (oestrogen-based HRT)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hormone</th>
+      <th>Target range</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Oestradiol (E2)</td>
+      <td><strong>100-200 pg/mL</strong> (367-734 pmol/L)</td>
+      <td>Endocrine Society 2017</td>
+    </tr>
+    <tr>
+      <td>Total testosterone</td>
+      <td><strong>&lt;50 ng/dL</strong> (&lt;1.7 nmol/L)</td>
+      <td>Endocrine Society 2017</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Transmasculine (testosterone-based HRT)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hormone</th>
+      <th>Target range</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Total testosterone</td>
+      <td><strong>300-1,000 ng/dL</strong> (10.4-34.7 nmol/L)</td>
+      <td>Endocrine Society 2017</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout callout-blue">
+  <p><strong>Units matter.</strong> UK labs typically report in pmol/L (oestradiol) and nmol/L (testosterone). US resources use pg/mL and ng/dL. Make sure you know which your results are in before comparing to target ranges. Conversion: E2 pg/mL x 3.67 = pmol/L. T ng/dL x 0.0347 = nmol/L.</p>
+</div>
+
+<h2>When to test</h2>
+
+<ul>
+  <li><strong>First year:</strong> Every 3 months</li>
+  <li><strong>After stabilisation:</strong> Every 6-12 months</li>
+  <li><strong>After dose changes:</strong> 4-6 weeks after any change, then again at 3 months</li>
+</ul>
+
+<h3>Timing on test day</h3>
+
+<p>When you get your blood drawn matters because hormone levels fluctuate:</p>
+
+<ul>
+  <li><strong>Injectable testosterone:</strong> Test at your <strong>trough</strong> — the day before or morning of your next injection. This shows your lowest level.</li>
+  <li><strong>Injectable oestradiol:</strong> Same — trough level, just before your next dose.</li>
+  <li><strong>Gel/patches:</strong> Test 4-6 hours after applying (or before your next application).</li>
+  <li><strong>Oral/sublingual oestradiol:</strong> Test just before your next dose (trough).</li>
+  <li><strong>Morning:</strong> Testosterone is naturally highest in the morning, so morning blood draws give the most consistent results.</li>
+</ul>
+
+<h2>Where to get tested in the UK</h2>
+
+<ul>
+  <li><strong>Your GP</strong> — if they're willing to do shared care or bridging prescriptions, they should do blood tests. Some GPs will do blood tests even without prescribing, especially if you're self-medicating and frame it as harm reduction.</li>
+  <li><strong>Private blood tests</strong> — if your GP won't cooperate:
+    <ul>
+      <li><a href="https://www.medichecks.com/" target="_blank" rel="noopener">Medichecks</a> — postal finger-prick or clinic venous draw. Trans-specific panels available.</li>
+      <li><a href="https://www.randox.com/" target="_blank" rel="noopener">Randox Health</a> — walk-in clinics in several UK cities.</li>
+      <li><a href="https://www.forthwithlife.co.uk/" target="_blank" rel="noopener">Forth</a> — postal hormone panels.</li>
+    </ul>
+  </li>
+  <li><strong>Trans Harm Reduction</strong> — may be able to help cover costs of blood testing for people who are self-medicating.</li>
+</ul>
+
+<p>Costs for private blood tests typically range from <strong>£30-100</strong> depending on how comprehensive the panel is and whether you do a finger-prick (cheaper) or venous draw (more accurate for some tests).</p>
+
+<h2>Where people disagree</h2>
+
+<h3>Target ranges: community vs guidelines</h3>
+
+<p>Some community members (particularly in r/DrWillPowers and r/TransDIY) advocate for oestradiol levels above the Endocrine Society's 200 pg/mL upper target — sometimes 200-400 pg/mL — arguing it produces better feminisation and more reliable testosterone suppression (reducing or eliminating the need for anti-androgens).</p>
+
+<p>The clinical evidence for supraphysiological dosing is limited. The Endocrine Society set their range based on typical cis female levels and available safety data. Neither side has definitive proof, and individual response varies enormously.</p>
+
+<h3>Progesterone monitoring</h3>
+
+<p>Progesterone is not routinely included in blood panels because it's not part of standard guidelines. Some community members argue it should be monitored, particularly for transfem people taking progesterone. Clinical guidance is silent on this for the most part.</p>
+
+<h2>Sources</h2>
+
+<ol>
+  <li><a href="https://academic.oup.com/jcem/article/102/11/3869/4157558" target="_blank" rel="noopener">Endocrine Society — Clinical Practice Guideline (2017)</a></li>
+  <li><a href="https://www.tandfonline.com/doi/full/10.1080/26895269.2022.2100644" target="_blank" rel="noopener">WPATH Standards of Care 8 (2022)</a></li>
+  <li><a href="https://transharmreduction.org/blood-tests" target="_blank" rel="noopener">Trans Harm Reduction — Blood Tests</a></li>
+  <li><a href="https://diyhrt.info/resources/bloodtests/" target="_blank" rel="noopener">DIY HRT Directory — Blood Testing</a></li>
+  <li><a href="https://transfemscience.org/" target="_blank" rel="noopener">Transfeminine Science</a></li>
+  <li><a href="https://www.medichecks.com/" target="_blank" rel="noopener">Medichecks</a></li>
+  <li><a href="https://www.gendergp.com/" target="_blank" rel="noopener">GenderGP — Monitoring guidance</a></li>
+  <li>Community discussion: r/TransDIY, r/MtF, r/ftm, r/DrWillPowers</li>
+  <li>Hormony Focus Group Data (Dec 2025)</li>
+</ol>
+
+</Topic>

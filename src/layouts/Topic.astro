@@ -1,0 +1,156 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  lastUpdated: string;
+  confidence: 'strong' | 'emerging' | 'contested' | 'insufficient';
+  sources: number;
+  tags?: string[];
+}
+
+const { title, description, lastUpdated, confidence, sources, tags = [] } = Astro.props;
+
+const confidenceLabels = {
+  strong: 'Strong consensus',
+  emerging: 'Emerging consensus',
+  contested: 'Contested',
+  insufficient: 'Insufficient data',
+};
+---
+<Base title={title} description={description}>
+  <article class="topic">
+    <header class="topic-header container">
+      <div class="topic-meta animate-fade-up">
+        <div class="topic-tags">
+          {tags.map((tag: string) => (
+            <span class="pill pill-blue">{tag}</span>
+          ))}
+        </div>
+      </div>
+
+      <h1 class="topic-title animate-fade-up" style="animation-delay: 60ms">{title}</h1>
+
+      <div class="topic-info animate-fade-up" style="animation-delay: 120ms">
+        <span class={`confidence confidence-${confidence}`}>
+          <span class="confidence-dot"></span>
+          {confidenceLabels[confidence]}
+        </span>
+        <span class="topic-info-sep"></span>
+        <span class="topic-info-item">{sources} sources</span>
+        <span class="topic-info-sep"></span>
+        <span class="topic-info-item">Updated {lastUpdated}</span>
+      </div>
+    </header>
+
+    <hr class="divider container" style="animation-delay: 180ms" />
+
+    <div class="topic-body container stagger">
+      <slot />
+    </div>
+
+    <div class="topic-footer container animate-fade-up">
+      <div class="callout callout-neutral">
+        <p><strong>About this page.</strong> This content was compiled from publicly available sources, reviewed by a community editor, and is updated when significant new information emerges. It is not medical advice. If something looks wrong, <a href="mailto:charlie@harperautomation.co.uk">let us know</a>.</p>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .topic-header {
+    padding-top: var(--space-4xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  .topic-title {
+    margin-bottom: var(--space-lg);
+  }
+
+  .topic-tags {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+  }
+
+  .topic-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .topic-info-item {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .topic-info-sep {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--border);
+  }
+
+  .topic-body {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .topic-body :global(h2) {
+    padding-top: var(--space-md);
+  }
+
+  .topic-body :global(h3) {
+    padding-top: var(--space-sm);
+  }
+
+  .topic-body :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-lg) 0;
+    font-size: 0.9rem;
+  }
+
+  .topic-body :global(th) {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 2px solid var(--border);
+  }
+
+  .topic-body :global(td) {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-secondary);
+  }
+
+  .topic-body :global(tr:hover td) {
+    background: var(--bg-warm);
+    transition: background var(--duration-fast) var(--ease-out);
+  }
+
+  .topic-body :global(blockquote) {
+    border-left: 3px solid var(--pink);
+    padding-left: var(--space-lg);
+    margin: var(--space-xl) 0;
+    font-style: italic;
+    color: var(--text-secondary);
+  }
+
+  .topic-body :global(code) {
+    font-size: 0.85em;
+    background: var(--bg-warm);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  .topic-footer {
+    padding-bottom: var(--space-3xl);
+  }
+</style>

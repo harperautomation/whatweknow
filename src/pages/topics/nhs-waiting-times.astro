@@ -1,0 +1,149 @@
+---
+import Topic from '@/layouts/Topic.astro';
+---
+<Topic
+  title="NHS gender clinic waiting times"
+  description="Current waiting times at every NHS gender identity clinic in England and Scotland, with data sources."
+  lastUpdated="March 2026"
+  confidence="strong"
+  sources={8}
+  tags={["UK", "NHS", "Waiting times"]}
+>
+
+<h2>The short version</h2>
+
+<p>NHS gender identity clinic waiting times in England range from roughly <strong>4 to 12+ years</strong> for a first appointment. Scotland is similar or worse. Wales averages around 2 years. The NHS's own target is 18 weeks.</p>
+
+<p>If you're being referred today, you will almost certainly wait years. Most people either go private, self-medicate, or do both while waiting.</p>
+
+<div class="callout callout-blue">
+  <p><strong>This is not opinion.</strong> These figures come directly from NHS England, Public Health Scotland, and FOI requests. Every clinic listed below includes a data source.</p>
+</div>
+
+<h2>England</h2>
+
+<p>NHS England runs 7 adult Gender Identity Clinics (GICs), with 5 pilot clinics added since 2020. The plan is to have regional services everywhere by 2026-27, but current capacity is nowhere near demand.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Clinic</th>
+      <th>Approx. wait for first appointment</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tavistock & Portman (London)</td>
+      <td>Closed March 2024</td>
+      <td>Adult GIC replaced by new services; patients redistributed</td>
+    </tr>
+    <tr>
+      <td>Nottingham Centre for Transgender Health</td>
+      <td>~5+ years</td>
+      <td>4,789 people on the waiting list (Jan 2026)</td>
+    </tr>
+    <tr>
+      <td>Leeds and York (Porterbrook / Northern)</td>
+      <td>~6+ years</td>
+      <td>Currently booking people referred in late 2019</td>
+    </tr>
+    <tr>
+      <td>Sheffield (Porterbrook)</td>
+      <td>~5+ years</td>
+      <td>Combined with Leeds referral pathway</td>
+    </tr>
+    <tr>
+      <td>Exeter (Devon)</td>
+      <td>~4-5 years</td>
+      <td>Smaller list but limited throughput</td>
+    </tr>
+    <tr>
+      <td>Daventry (Northamptonshire)</td>
+      <td>~5+ years</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Northern Region Gender Dysphoria Service</td>
+      <td>~7 years (81 months)</td>
+      <td>Longest reported wait in England</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="source">Sources: <a href="https://transactual.org.uk/medical-transition/gender-dysphoria-clinics/" target="_blank" rel="noopener">TransActual Gender Clinics</a>, <a href="https://www.gendergp.com/blog/nhs-gender-identity-clinic-waiting-times/" target="_blank" rel="noopener">GenderGP Waiting Times Tracker</a></p>
+
+<h3>Pilot clinics</h3>
+
+<p>Five pilot gender services have been running since 2020-21, intended to reduce pressure on legacy GICs. In practice, they have shorter lists but limited capacity and are not yet fully operational replacements.</p>
+
+<h3>"Waiting Well" initiative</h3>
+
+<p>NHS England is piloting a "Waiting Well" programme from early 2026 in the south-west region, offering limited support to people on waiting lists. Details are sparse and it has not yet launched nationally.</p>
+
+<h2>Scotland</h2>
+
+<p>Scotland publishes waiting time data through Public Health Scotland. The numbers are grim:</p>
+
+<ul>
+  <li><strong>Glasgow (Sandyford)</strong>: Effectively a <strong>224-year theoretical wait</strong> based on current throughput versus list size. 98% of people waiting 3+ years are at this clinic.</li>
+  <li><strong>Edinburgh (Chalmers)</strong>: Shorter but still measured in years.</li>
+  <li>510 people have been waiting 3-4 years, 601 waiting 4-5 years, 167 waiting 5+ years.</li>
+</ul>
+
+<p>The Scottish Government target is 18 weeks from referral to first appointment. No gender clinic is anywhere close to meeting this.</p>
+
+<p class="source">Source: <a href="https://publichealthscotland.scot/publications/nhs-gender-identity-clinics-waiting-times-for-first-outpatient-consultation/" target="_blank" rel="noopener">Public Health Scotland — NHS Gender Identity Clinics Waiting Times (Oct 2025)</a></p>
+
+<h2>Wales</h2>
+
+<p>Wales has a single Welsh Gender Service. Average waiting times are around <strong>2 years</strong>, significantly better than England and Scotland but still far beyond the 18-week target. Public data is more limited.</p>
+
+<h2>Northern Ireland</h2>
+
+<p>Northern Ireland's Brackenburn Clinic in Belfast is the sole provider. Waiting times are comparable to English clinics. Cross-border access to services in the Republic of Ireland is theoretically possible but poorly established.</p>
+
+<h2>What the community says</h2>
+
+<p>There is no disagreement on this topic. Across every community space — Reddit, forums, TikTok, focus groups — the consensus is the same:</p>
+
+<ul>
+  <li>Waiting times are dangerous and people are suffering.</li>
+  <li>The system is not fit for purpose.</li>
+  <li>Most people are forced into private care or self-medication because they cannot wait 5-12 years.</li>
+  <li>Some people report being on waiting lists for years without receiving <strong>any</strong> contact from the clinic.</li>
+</ul>
+
+<blockquote>
+  "I've had no support at all... from any kind of professional. It's been 5 years since I applied to the gender clinic."
+  <br /><em>— Focus group participant, Dec 2025</em>
+</blockquote>
+
+<h2>What are the alternatives?</h2>
+
+<p>While waiting for NHS services, most trans people in the UK use one or more of the following:</p>
+
+<ul>
+  <li><strong>Private providers:</strong> GenderGP (no waiting list, ~£195 setup + monthly subscription), GenderCare (~£600 initial, ~5 month wait), London Transgender Clinic (~£1,060 for first 2 years, &lt;1 month wait). See our upcoming <em>UK private providers compared</em> topic.</li>
+  <li><strong>Bridging prescriptions:</strong> Your GP <em>can</em> prescribe HRT as a bridging measure while you wait. Many won't, but some will — especially with guidance from a private provider. This is explicitly supported by NHS policy but inconsistently applied.</li>
+  <li><strong>Self-medication:</strong> Approximately 25% of trans people in the UK self-medicate with hormones obtained online. This is a harm reduction reality driven by system failure, not a preference. See <a href="https://transharmreduction.org/" target="_blank" rel="noopener">Trans Harm Reduction</a> for safety information.</li>
+</ul>
+
+<div class="callout callout-pink">
+  <p><strong>You are not stuck.</strong> Being on an NHS waiting list does not mean doing nothing for years. Private providers, bridging prescriptions, and informed self-advocacy are options. We'll be covering each of these in dedicated topics.</p>
+</div>
+
+<h2>Sources</h2>
+
+<ol>
+  <li><a href="https://transactual.org.uk/medical-transition/gender-dysphoria-clinics/" target="_blank" rel="noopener">TransActual — Gender Dysphoria Clinics</a></li>
+  <li><a href="https://www.gendergp.com/blog/nhs-gender-identity-clinic-waiting-times/" target="_blank" rel="noopener">GenderGP — NHS Gender Identity Clinic Waiting Times</a></li>
+  <li><a href="https://publichealthscotland.scot/publications/nhs-gender-identity-clinics-waiting-times-for-first-outpatient-consultation/" target="_blank" rel="noopener">Public Health Scotland — GIC Waiting Times (Oct 2025)</a></li>
+  <li><a href="https://www.transhealthcareintel.com/private-healthcare" target="_blank" rel="noopener">Trans Healthcare Intel — Private Healthcare</a></li>
+  <li><a href="https://genderkit.org.uk/" target="_blank" rel="noopener">GenderKit — UK Gender Resources</a></li>
+  <li><a href="https://transharmreduction.org/" target="_blank" rel="noopener">Trans Harm Reduction</a></li>
+  <li>Hormony Focus Group Data (Dec 2025, 4 participants)</li>
+  <li>NHS England service specification updates (2025-26)</li>
+</ol>
+
+</Topic>
